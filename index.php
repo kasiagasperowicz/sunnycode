@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main>
-    <h1>To jest Sunnycode</h1>
+    <!-- <h1>To jest Sunnycode</h1> -->
 
     <?php
     if ( have_posts() ) :

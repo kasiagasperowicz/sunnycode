@@ -8,5 +8,5 @@
 <body <?php body_class(); ?>>
 
 <header>
-    <p>To jest header Sunnycode</p>
+    <!-- <p>To jest header Sunnycode</p> -->
 </header>
