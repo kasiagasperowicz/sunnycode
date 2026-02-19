@@ -6,19 +6,19 @@ Version: 1.0
 */
 
 body {
-    background: #f5f5f5;
+    background: #c7cdbf;
     font-family: sans-serif;
 }
 
 header {
     padding: 20px;
-    background: yellow;
+    background: #919682;
     color: white;
 }
 
 footer {
     padding: 20px;
-    background: red;
+    background: #595E48;
     color: white;
 }
 
