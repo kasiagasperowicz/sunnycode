@@ -1,0 +1,23 @@
+name: Deploy to staging
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy via SSH to staging
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: h76.seohost.pl
+          username: srv105070
+          port: 57185
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd domains/staging.sunnycode.pl/public_html/wp-content/themes/sunnycode
+            git pull origin develop
+            
