@@ -10,9 +10,15 @@ body {
     font-family: sans-serif;
 }
 
-header, footer {
+header {
     padding: 20px;
     background: #7A8C82;
+    color: white;
+}
+
+footer {
+    padding: 20px;
+    background: #c9d9c1;
     color: white;
 }
 
