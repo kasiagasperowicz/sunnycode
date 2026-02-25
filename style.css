@@ -5,23 +5,6 @@ Description: Custom theme for Sunnycode
 Version: 1.0
 */
 
-body {
-    background: #c7cdbf;
-    font-family: sans-serif;
-}
-
-header {
-    padding: 20px;
-    background: #919682;
-    color: white;
-}
-
-footer {
-    padding: 20px;
-    background: #595E48;
-    color: white;
-}
-
-main {
-    padding: 40px;
+html {
+  background: #F7F5F2;
 }

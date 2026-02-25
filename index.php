@@ -1,16 +1,7 @@
 <?php get_header(); ?>
 
 <main>
-    <!-- <h1>To jest Sunnycode</h1> -->
-
-    <?php
-    if ( have_posts() ) :
-        while ( have_posts() ) :
-            the_post();
-            the_content();
-        endwhile;
-    endif;
-    ?>
+  <h1>Sunnycode</h1>
 </main>
 
 <?php get_footer(); ?>
