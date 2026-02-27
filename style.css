@@ -14,9 +14,13 @@ body {
   font-weight: 300;
   line-height: 1.6;
   margin: 0;
+   height: 200vh;
 }
+
 .container {
-    padding: 30px;
+  
+  margin: 0 auto;
+  padding: 40px 30px;
 }
 @media (max-width: 768px) {
    .container {
@@ -32,25 +36,73 @@ h1, h2, h3, h4 {
 
 }
 
-.sunnycode {
-    color: #fff;
-    font-size: 130px;
-    font-weight: 400;
-    text-align: center;
-    line-height: 130px;
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
 }
 @media (max-width: 768px) {
-    .sunnycode {
-    color: #fff;
-    font-size: 64px;
-    font-weight: 400;
-    text-align: center;
-    line-height: 64px;
+     .hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: start;
 }
 }
+
+.hero-inner {
+  width: 100%;
+  text-align: center;
+}
+
+.sunnycode {
+  font-size: clamp(3rem, 8vw, 8rem);
+  line-height: 0.95;
+  margin-bottom: 1.5rem;
+
+  color: #fff;
+  text-align: center;
+
+  font-feature-settings: "liga" 1;
+  text-rendering: optimizeLegibility;
+}
+
+.hero-claim {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: #6B6B6B;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+
+
 .sunnycode-c {
     color: #FF7B02;
 }
+.sunnycode-c-svg {
+
+
+    display: inline-block;
+    line-height: 0;
+    transform-origin: top center;
+    will-change: transform;
+    transition: transform 0.15s ease-out;
+}
+
+.sunnycode-c-svg svg {
+    height: calc(0.8em /2);
+    width: auto;
+    display: block;
+}
+/* @media (max-width: 768px) {
+   .sunnycode-c-svg svg {
+    height:25px;
+} 
+} */
 .sunnycode-paragraph-gray {
     color: #6B6B6B;
     text-align: center;
@@ -64,20 +116,30 @@ h1, h2, h3, h4 {
     
 }
 }
+/* html {
+  background:
+    radial-gradient(circle at 50% 20%, #F7F5F2 0%, #fff 60%);
+} */
+
 html {
-  background: #F7F5F2;
+    background: #F7F5F2;
 }
 
 
 
 .custom-logo {
-  height: 100px;
+  height: 60px;
   width: auto;
 }
 @media (max-width: 768px) {
     .custom-logo {
-  height: 100px;
+  height: 60px;
   width: auto;
   margin-bottom: 40px;
+  margin-top: 40px;
 }
 }
+
+
+
+
