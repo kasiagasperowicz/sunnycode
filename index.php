@@ -4,7 +4,7 @@
   <!-- <h1 class="sunnycode">Sunny<span class="sunnycode-c">c</span>ode</h1> -->
 
   <section class="hero">
-  <div class="container hero-inner">
+  <div class="container hero-inner"> 
 
     <h1 class="sunnycode">
       Sunny<span class="sunnycode-c-svg">

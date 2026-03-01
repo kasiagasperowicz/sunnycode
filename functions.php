@@ -9,7 +9,7 @@ function sunnycode_enqueue_styles() {
 }
 
 
-function sunnycode_enqueue_fonts() {
+function sunnycode_enqueue_fonts() { 
 
     wp_enqueue_style(
         'sunnycode-google-fonts',

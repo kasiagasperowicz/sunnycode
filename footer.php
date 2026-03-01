@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.addEventListener('scroll', () => {
     const delta = window.scrollY - lastScrollY;
-    lastScrollY = window.scrollY;
+    lastScrollY = window.scrollY; 
 
     // nadaj impuls zależny od siły scrolla
     velocity += delta * 0.05;
