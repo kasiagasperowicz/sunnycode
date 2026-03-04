@@ -17,6 +17,9 @@
         if (function_exists('pll_the_languages')) {
             $languages = pll_the_languages([
                 'raw' => 1,
+                'hide_if_empty' => 0,
+                'hide_if_no_translation' => 0,
+                'force_home' => 1,
             ]);
 
             if (!empty($languages)) {
