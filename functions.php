@@ -45,3 +45,14 @@ function sunnycode_theme_setup() {
     ));
 }
 add_action('after_setup_theme', 'sunnycode_theme_setup');
+
+
+add_action('init', function() {
+    if (function_exists('pll_register_string')) {
+        pll_register_string(
+            'Hero Tagline', 
+            'slogan',
+            'Theme'
+        );
+    }
+});
