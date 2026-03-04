@@ -140,6 +140,39 @@ html {
 }
 }
 
+.top-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lang-switcher {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  
+  
+}
+
+.lang-link {
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: #6B6B6B;
+  letter-spacing: 0.02em;
+  line-height: 1.6;;
+  transition: opacity 0.2s ease;
+}
+
+.lang-link:hover {
+  color: #FF7B02;
+}
+
+.lang-link.is-active {
+  color: #FF7B02;
+  pointer-events: none;
+}
+
 
 
 

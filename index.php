@@ -12,7 +12,11 @@
       </span>ode
     </h1>
 
-     <p class="sunnycode-paragraph-gray">Something lovely is on the way. Stay tuned!</p>
+     <!-- <p class="sunnycode-paragraph-gray">Something lovely is on the way. Stay tuned!</p> -->
+
+
+    
+     <p class="sunnycode-paragraph-gray"><?php echo esc_html( pll__('slogan') ); ?></p>
 
   </div>
 </section>

@@ -42,11 +42,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     c.style.filter = `drop-shadow(${shadowX}px ${shadowY}px ${blur}px rgba(0,0,0,0.08))`;
 
-    const brightness = 1 + Math.abs(angle) * 0.01;
-        c.style.filter = `
-        drop-shadow(${shadowX}px ${shadowY}px ${blur}px rgba(0,0,0,0.08))
-        brightness(${brightness})
-        `;
+    // const brightness = 1 + Math.abs(angle) * 0.01;
+    //     c.style.filter = `
+    //     drop-shadow(${shadowX}px ${shadowY}px ${blur}px rgba(0,0,0,0.08))
+    //     brightness(${brightness})
+    //     `;
 
     requestAnimationFrame(animate);
   }
