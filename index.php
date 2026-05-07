@@ -58,4 +58,20 @@ if ( $about_title || $about_subtitle || $about_content || $about_image_id ) : ?>
   
 </main>
 
+  <?php
+  $parallax_image_id = get_theme_mod( 'parallax_image', 0 );
+  if ( $parallax_image_id ) :
+      $parallax_url = wp_get_attachment_image_url( $parallax_image_id, 'full' );
+  ?>
+  <section
+      class="parallax-section"
+      id="parallax-section"
+      aria-hidden="true"
+      style="--parallax-bg: url('<?php echo esc_url( $parallax_url ); ?>')"
+  >
+      <div class="parallax-bg" id="parallax-bg"></div>
+  </section>
+  <?php endif; ?>
+
+
 <?php get_footer(); ?>
