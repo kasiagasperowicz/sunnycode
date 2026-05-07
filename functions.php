@@ -56,3 +56,63 @@ add_action('init', function() {
         );
     }
 });
+
+/**
+ * Sekcja "O nas" — ustawienia Customizera
+ */
+add_action( 'customize_register', function( $wp_customize ) {
+
+    $wp_customize->add_section( 'sunnycode_about_section', array(
+        'title'    => __( 'Sekcja: O nas (Homepage)', 'sunnycode' ),
+        'priority' => 30,
+    ) );
+
+    // Tytuł
+    $wp_customize->add_setting( 'about_title', array(
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport'         => 'refresh',
+    ) );
+    $wp_customize->add_control( 'about_title', array(
+        'label'   => __( 'Tytuł', 'sunnycode' ),
+        'section' => 'sunnycode_about_section',
+        'type'    => 'text',
+    ) );
+
+    // Podtytuł
+    $wp_customize->add_setting( 'about_subtitle', array(
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport'         => 'refresh',
+    ) );
+    $wp_customize->add_control( 'about_subtitle', array(
+        'label'   => __( 'Podtytuł', 'sunnycode' ),
+        'section' => 'sunnycode_about_section',
+        'type'    => 'text',
+    ) );
+
+    // Treść
+    $wp_customize->add_setting( 'about_content', array(
+        'default'           => '',
+        'sanitize_callback' => 'wp_kses_post',
+        'transport'         => 'refresh',
+    ) );
+    $wp_customize->add_control( 'about_content', array(
+        'label'   => __( 'Treść', 'sunnycode' ),
+        'section' => 'sunnycode_about_section',
+        'type'    => 'textarea',
+    ) );
+
+    // Zdjęcie
+    $wp_customize->add_setting( 'about_image', array(
+        'default'           => '',
+        'sanitize_callback' => 'absint',
+        'transport'         => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'about_image', array(
+        'label'     => __( 'Zdjęcie', 'sunnycode' ),
+        'section'   => 'sunnycode_about_section',
+        'mime_type' => 'image',
+    ) ) );
+
+} );

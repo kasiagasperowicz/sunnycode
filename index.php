@@ -21,7 +21,40 @@
   </div>
 </section>
 
- 
+<?php
+$about_title    = get_theme_mod( 'about_title', '' );
+$about_subtitle = get_theme_mod( 'about_subtitle', '' );
+$about_content  = get_theme_mod( 'about_content', '' );
+$about_image_id = get_theme_mod( 'about_image', 0 );
+
+if ( $about_title || $about_subtitle || $about_content || $about_image_id ) : ?>
+<section class="about-section">
+  <div class="container about-inner">
+
+    <div class="about-text">
+      <?php if ( $about_title ) : ?>
+        <h2 class="about-title"><?php echo esc_html( $about_title ); ?></h2>
+      <?php endif; ?>
+
+      <?php if ( $about_subtitle ) : ?>
+        <p class="about-subtitle"><?php echo esc_html( $about_subtitle ); ?></p>
+      <?php endif; ?>
+
+      <?php if ( $about_content ) : ?>
+        <div class="about-content"><?php echo wp_kses_post( $about_content ); ?></div>
+      <?php endif; ?>
+    </div>
+
+    <?php if ( $about_image_id ) : ?>
+      <div class="about-image">
+        <?php echo wp_get_attachment_image( $about_image_id, 'large', false, array( 'class' => 'about-img', 'loading' => 'lazy' ) ); ?>
+      </div>
+    <?php endif; ?>
+
+  </div>
+</section>
+<?php endif; ?>
+
   
 </main>
 
